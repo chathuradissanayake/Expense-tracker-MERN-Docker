@@ -12,7 +12,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    sh 'docker build -t supun3998/server-image .'
+                    sh 'docker build -t chathuradissanayake/server-image .'
                 }
             }
         }
@@ -50,7 +50,7 @@ pipeline {
                 script {
                     retry(3) {
                         echo 'Pushing image to Docker Hub...'
-                        sh 'docker push supun3998/server-app-image'
+                        sh 'docker push chathuradissanayake/server-image'
                     }
                 }
             }
